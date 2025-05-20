@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
-* Студент: [Елена Гарипова](https://up.htmlacademy.ru/htmlcss-individual/2/user/2545671).
-* Наставник: `Неизвестно`.
+- Студент: [Елена Гарипова](https://up.htmlacademy.ru/htmlcss-individual/2/user/2545671).
+- Наставник: [Анна Лисененкова](https://htmlacademy.ru/profile/ankhena).
 
 ---
 
