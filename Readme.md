@@ -2,7 +2,7 @@
 
 - Студент: [Елена Гарипова](https://up.htmlacademy.ru/htmlcss-individual/2/user/2545671).
 - Наставник: [Анна Лисененкова](https://htmlacademy.ru/profile/ankhena).
-- Сайт [Мой проект Седона](https://leno4kag.github.io/2545671-sedona-2/).
+- Сайт: [Мой проект Седона](https://leno4kag.github.io/2545671-sedona-2/).
 
 ---
 
