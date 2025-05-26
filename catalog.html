@@ -7,7 +7,7 @@
   </head>
 
   <body>
-    <header class="page-header">
+    <header class="page-header" data-test="header">
       <nav class="navigation">
         <a class="navigation-logo" href="index.html">
           <img class="page-header-logo" src="#" alt="Логотип Седона">
@@ -41,7 +41,7 @@
         </ul>
       </nav>
     </header>
-    <main class="main-inner">
+    <main class="main-inner" data-test="main">
       <header class="inner-header">
         <h1 class="inner-header-title">Гостиницы Седоны</h1>
         <ul class="breadcrambs">
@@ -55,7 +55,7 @@
           </li>
         </ul>
       </header>
-      <section class="filter">
+      <section class="filter" data-test="filter">
         <h2 class="visually-hidden">Список гостиниц с фильтрами</h2>
         <form class="filter-form" action="https://echo.htmlacademy.ru/" method="get">
           <fieldset class="filter-group">
@@ -111,7 +111,7 @@
           <button class="button" type="reset">Сбросить</button>
         </form>
       </section>
-      <section class="catalog-hotel">
+      <section class="catalog-hotel" data-test="catalog">
         <h2 class="catalog-hotel-title">Найдено гостиниц: 38</h2>
         <select class="select-control" aria-label="Сортировка">
           <option value="cheap">Сначала дешёвое</option>
@@ -138,7 +138,7 @@
         <ul class="cards-list">
           <li class="cards-item">
             <a class="cards-link-image" tabindex="-1" href="#">
-              <img class="cards-image" src="" alt="">
+              <img class="cards-image" src="" alt="Вид звездного неба из пещеры">
             </a>
             <a class="card-link-title" tabindex="-1" href="#">
               <h3 class="cards-title">Amara Resort & Spa</h3>
@@ -154,7 +154,7 @@
           </li>
           <li class="cards-item">
             <a class="cards-link-image" tabindex="-1" href="#">
-              <img class="cards-image" src="" alt="">
+              <img class="cards-image" src="" alt="Радуга на грозовом небе над каньоном">
             </a>
             <a class="card-link-title" tabindex="-1" href="#">
               <h3 class="cards-title">Villas at Poco Diablo</h3>
@@ -170,7 +170,7 @@
           </li>
           <li class="cards-item">
             <a class="cards-link-image" tabindex="-1" href="#">
-              <img class="cards-image" src="" alt="">
+              <img class="cards-image" src="" alt="Живописная долина со скалами красного цвета">
             </a>
             <a class="card-link-title" tabindex="-1" href="#">
               <h3 class="cards-title">Desert Quail Inn</h3>
@@ -186,7 +186,7 @@
           </li>
           <li class="cards-item">
             <a class="cards-link-image" tabindex="-1" href="#">
-              <img class="cards-image" src="" alt="">
+              <img class="cards-image" src="" alt="Коньон на фоне зведного неба">
             </a>
             <a class="card-link-title" tabindex="-1" href="#">
               <h3 class="cards-title">GreenTree Inn</h3>
@@ -223,7 +223,7 @@
         </ul>
       </section>
     </main>
-    <footer class="page-footer">
+    <footer class="page-footer" data-test="footer">
       <section class="footer-social">
         <h2 class="footer-social-title">Социальные сети</h2>
         <ul class="footer-social-list">
