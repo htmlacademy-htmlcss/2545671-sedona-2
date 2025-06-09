@@ -4,10 +4,11 @@
   <head>
     <meta charset="UTF-8">
     <title>Гостиницы Седоны</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
 
   <body>
-    <header class="page-header" data-test="header">
+    <header class="page-header container" data-test="header">
       <nav class="navigation">
         <a class="navigation-logo" href="index.html">
           <img class="page-header-logo" src="images/logo.svg" alt="Логотип Седоны">
@@ -41,9 +42,9 @@
         </ul>
       </nav>
     </header>
-    <main class="main" data-test="main">
+    <main class="main container" data-test="main">
       <div class="main-header">
-        <h1 class="main-header-title">Гостиницы Седоны</h1>
+        <h1 class="main-heading">Гостиницы Седоны</h1>
         <ul class="breadcrumbs">
           <li class="breadcrumbs-item">
             <a class="breadcrumbs-link" href="index.html">
@@ -106,13 +107,13 @@
                 <input class="price-input" name="max-price" type="number" value="9000">
               </label>
             </fieldset>
-            <button class="button" type="submit">Применить</button>
-            <button class="button" type="reset">Сбросить</button>
+            <button class="button filter-button" type="submit">Применить</button>
+            <button class="button filter-button filter-button-reset" type="reset">Сбросить</button>
           </form>
         </section>
       </div>
       <section class="catalog-hotel" data-test="catalog">
-        <h2 class="catalog-hotel-title">Найдено гостиниц: 38</h2>
+        <h2 class="page-title catalog-hotel-title">Найдено гостиниц: 38</h2>
         <select class="select-control" aria-label="Сортировка">
           <option value="cheap">Сначала дешёвое</option>
           <option value="popular">Сначала популярное</option>
@@ -146,8 +147,8 @@
             </a>
             <p class="cards-text">Гостиница</p>
             <p class="cards-text">От 4000 ₽</p>
-            <a class="button" href="#">Подробнее</a>
-            <button class="button favourites-button-selected" type="button">В избранное</button>
+            <a class="button cards-button" href="#">Подробнее</a>
+            <button class="button cards-button favourites-button" type="button">В избранное</button>
             <p class="stars four-stars">
               <span class="visually-hidden">4 звезды</span>
             </p>
@@ -163,8 +164,8 @@
             </a>
             <p class="cards-text">Гостиница</p>
             <p class="cards-text">От 5000 ₽</p>
-            <a class="button" href="#">Подробнее</a>
-            <button class="button favourites-button" type="button">В избранное</button>
+            <a class="button cards-button" href="#">Подробнее</a>
+            <button class="button cards-button favourites-button-selected" type="button">В избранное</button>
             <p class="stars four-stars">
               <span class="visually-hidden">4 звезды</span>
             </p>
@@ -180,8 +181,8 @@
             </a>
             <p class="cards-text">Гостиница</p>
             <p class="cards-text">От 2500 ₽</p>
-            <a class="button" href="#">Подробнее</a>
-            <button class="button favourites-button" type="button">В избранное</button>
+            <a class="button cards-button" href="#">Подробнее</a>
+            <button class="button cards-button favourites-button" type="button">В избранное</button>
             <p class="stars three-stars">
               <span class="visually-hidden">3 звезды</span>
             </p>
@@ -197,8 +198,8 @@
             </a>
             <p class="cards-text">Гостиница</p>
             <p class="cards-text">От 1500 ₽</p>
-            <a class="button" href="#">Подробнее</a>
-            <button class="button favourites-button" type="button">В избранное</button>
+            <a class="button cards-button" href="#">Подробнее</a>
+            <button class="button cards-button favourites-button" type="button">В избранное</button>
             <p class="stars two-stars">
               <span class="visually-hidden">2 звезды</span>
             </p>
@@ -227,18 +228,19 @@
         </ul>
       </section>
       <section class="subscribe" data-test="subscribe">
-        <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
-        <p class="subscribe-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
+        <h2 class="page-title subscribe-title">Подпишитесь на рассылку</h2>
+        <p class="page-text subscribe-description">Только полезная информация и никакого спама, честное бойскаутское!
+        </p>
         <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
           <label class="visually-hidden" for="subscribe-email">
             Ваш e-mail
           </label>
-          <input type="email" id="subscribe-email" name="user-email" placeholder="Ваш e-mail">
-          <button class="subscribe-button" type="submit">Подписаться</button>
+          <input class="input-email" type="email" id="subscribe-email" name="user-email" placeholder="Ваш e-mail">
+          <button class="button subscribe-button" type="submit">Подписаться</button>
         </form>
       </section>
     </main>
-    <footer class="page-footer" data-test="footer">
+    <footer class="page-footer container" data-test="footer">
       <ul class="social">
         <li class="social-item">
           <a class="social-link" href="https://vk.com/htmlacademy">
@@ -262,7 +264,7 @@
         </a>
       </section>
       <a class="developer-link" href="https://htmlacademy.ru/intensive/htmlcss">
-        <img class="developer-logo" src="images/logo-htmlacademy.svg" width="115" height="33" alt=".html academy">
+        <img class="developer-logo" src="images/logo-htmlacademy.svg" width="115" height="33" alt="Разработчик сайта">
       </a>
     </footer>
   </body>
