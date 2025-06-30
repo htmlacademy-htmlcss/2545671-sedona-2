@@ -149,8 +149,8 @@
             <a class="card-link-title" tabindex="-1" href="#">
               <h3 class="cards-title">Amara Resort & Spa</h3>
             </a>
-            <p class="cards-text">Гостиница</p>
-            <p class="cards-text">От 4000 ₽</p>
+            <p class="cards-text cards-name">Гостиница</p>
+            <p class="cards-text cards-price">От 4000 ₽</p>
             <a class="button cards-button" href="#">Подробнее</a>
             <button class="button cards-button favourites-button" type="button">В избранное</button>
             <p class="stars four-stars">
@@ -166,8 +166,8 @@
             <a class="card-link-title" tabindex="-1" href="#">
               <h3 class="cards-title">Villas at Poco Diablo</h3>
             </a>
-            <p class="cards-text">Гостиница</p>
-            <p class="cards-text">От 5000 ₽</p>
+            <p class="cards-text cards-name">Гостиница</p>
+            <p class="cards-text cards-price">От 5000 ₽</p>
             <a class="button cards-button" href="#">Подробнее</a>
             <button class="button cards-button favourites-button-selected" type="button">В избранное</button>
             <p class="stars four-stars">
@@ -183,8 +183,8 @@
             <a class="card-link-title" tabindex="-1" href="#">
               <h3 class="cards-title">Desert Quail Inn</h3>
             </a>
-            <p class="cards-text">Гостиница</p>
-            <p class="cards-text">От 2500 ₽</p>
+            <p class="cards-text cards-name">Гостиница</p>
+            <p class="cards-text cards-price">От 2500 ₽</p>
             <a class="button cards-button" href="#">Подробнее</a>
             <button class="button cards-button favourites-button" type="button">В избранное</button>
             <p class="stars three-stars">
@@ -200,8 +200,8 @@
             <a class="card-link-title" tabindex="-1" href="#">
               <h3 class="cards-title">GreenTree Inn</h3>
             </a>
-            <p class="cards-text">Гостиница</p>
-            <p class="cards-text">От 1500 ₽</p>
+            <p class="cards-text cards-name">Гостиница</p>
+            <p class="cards-text cards-price">От 1500 ₽</p>
             <a class="button cards-button" href="#">Подробнее</a>
             <button class="button cards-button favourites-button" type="button">В избранное</button>
             <p class="stars two-stars">
@@ -232,9 +232,12 @@
         </ul>
       </section>
       <section class="subscribe" data-test="subscribe">
-        <h2 class="page-title subscribe-title">Подпишитесь на рассылку</h2>
-        <p class="page-text subscribe-description">Только полезная информация и никакого спама, честное бойскаутское!
-        </p>
+        <div class="special-wrapper subscribe-wrapper">
+          <h2 class="page-title subscribe-title">Подпишитесь на&nbsp;рассылку</h2>
+          <p class="page-text subscribe-description">Только полезная информация и&nbsp;никакого спама,<br>честное
+            бойскаутское!
+          </p>
+        </div>
         <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
           <label class="visually-hidden" for="subscribe-email">
             Ваш e-mail
@@ -245,33 +248,31 @@
       </section>
     </main>
     <footer class="page-footer container" data-test="footer">
-      <div class="page-footer-wrapper">
-        <ul class="social">
-          <li class="social-item">
-            <a class="social-link" href="https://vk.com/htmlacademy">
-              <span class="visually-hidden">Вконтакте</span>
-            </a>
-          </li>
-          <li class="social-item">
-            <a class="social-link" href="https://t.me/htmlacademy">
-              <span class="visually-hidden">Телеграм</span>
-            </a>
-          </li>
-          <li class="social-item">
-            <a class="social-link" href="https://www.youtube.com/user/htmlacademyru">
-              <span class="visually-hidden">Ютуб</span>
-            </a>
-          </li>
-        </ul>
-        <section class="contacts">
-          <h2 class="visually-hidden">Контакты</h2>
-          <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12
+      <ul class="social">
+        <li class="social-item">
+          <a class="social-link" href="https://vk.com/htmlacademy">
+            <span class="visually-hidden">Вконтакте</span>
           </a>
-        </section>
-        <a class="developer-link" href="https://htmlacademy.ru/intensive/htmlcss">
-          <img class="developer-logo" src="images/logo-htmlacademy.svg" width="115" height="33" alt="Разработчик сайта">
+        </li>
+        <li class="social-item">
+          <a class="social-link" href="https://t.me/htmlacademy">
+            <span class="visually-hidden">Телеграм</span>
+          </a>
+        </li>
+        <li class="social-item">
+          <a class="social-link" href="https://www.youtube.com/user/htmlacademyru">
+            <span class="visually-hidden">Ютуб</span>
+          </a>
+        </li>
+      </ul>
+      <section class="contacts">
+        <h2 class="visually-hidden">Контакты</h2>
+        <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12
         </a>
-      </div>
+      </section>
+      <a class="developer-link" href="https://htmlacademy.ru/intensive/htmlcss">
+        <img class="developer-logo" src="images/logo-htmlacademy.svg" width="115" height="33" alt="Разработчик сайта">
+      </a>
     </footer>
   </body>
 

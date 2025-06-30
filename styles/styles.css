@@ -34,9 +34,9 @@ html {
 
 body {
   margin: 0;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
-  min-height: 100%;
   font-family: var(--font-family);
   font-size: var(--font-size);
   background-color: var(--color-light-gray);
@@ -47,7 +47,7 @@ body {
   width: 1200px;
   margin: 0 auto;
   background-color: #ffffff;
-  box-shadow: 0 0 15px 0  rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 15px 0  rgba(0, 0, 0, 0.2);
 }
 
 .visually-hidden {
@@ -68,7 +68,7 @@ body {
   font-weight: 700;
   color: #ffffff;
   text-align: center;
-  background-color: #756175;
+  background-color: #756157;
   text-transform: uppercase;
   text-decoration: none;
 }
@@ -78,43 +78,41 @@ body {
   flex-wrap: wrap;
   padding-right: 70px;
   padding-left: 70px;
-  margin: 0 auto;
-  gap: 30px;
+  column-gap: 30px;
 }
 
-.navigation-logo {
-  width: 140px;
+.page-header-logo {
+  display: block;
 }
 
 .navigation-list {
-  margin: 0;
+  margin: 0 auto 0 0;
   padding: 0;
+  width: 450px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  width: 610px;
-  margin-right: auto;
   list-style-type: none;
 }
 
 .navigation-link {
   display: block;
+  padding: 20px 16px;
   font-size: 20px;
   line-height: 1.2;
   font-weight: 700;
   text-align: center;
   color: #000000;
   text-decoration: none;
-  padding: 20px 16px;
 }
 
 .navigation-user {
   margin: 0;
   padding: 0;
+  max-width: 300px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  max-width: 300px;
   list-style-type: none;
 }
 
@@ -140,8 +138,7 @@ body {
   background-size: 100% auto, cover;
   background-position: bottom, center;
   background-color: rgba(131, 179, 211, 0.2);
-  padding-top: 51px;
-  padding-bottom: 82px;
+  padding: 51px 70px 82px;
 }
 
 .hero-image {
@@ -154,12 +151,20 @@ body {
   flex-direction: column;
 }
 
-.advantages-wrapper {
+.special-wrapper {
   display: flex;
   flex-direction: column;
+  width: 655px;
   margin: 0 auto;
-  padding: 69px 274px;
-  margin-bottom: 21px;
+}
+
+.advantages-wrapper {
+  padding: 69px 0;
+  margin-bottom: 20px;
+}
+
+.advantages-additional-wrapper {
+  padding: 64px 0;
 }
 
 .page-title {
@@ -187,11 +192,14 @@ body {
 }
 
 .advantages-item-dark-wrapper {
-  margin: 102px 85px;
+  padding: 102px 85px;
 }
 
 .advantages-item-wrapper {
-  margin: 113px 85px;
+  width: 230px;
+  margin: 0 auto;
+  padding-top: 113px;
+  padding-bottom: 113px;
 }
 
 .advantages-item-dark .advantages-title {
@@ -199,6 +207,7 @@ body {
 }
 
 .advantages-item {
+  flex-grow: 1;
   width: 400px;
 }
 
@@ -212,7 +221,7 @@ body {
 
 .advantages-item-dark {
   display: flex;
-  min-width: 1200px;
+  width: 100%;
   background-color: #82b3d3;
   color: #ffffff;
 }
@@ -245,17 +254,13 @@ body {
   align-items: center;
 }
 
-.advantages-additional-wrapper {
-  padding: 64px 347px;
-}
-
 .advantages-additional-list .advantages-additional-light {
-  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
   background-color: #ffffff;
 }
 
 .advantages-additional-item-wrapper {
-  margin: 81px 85px;
+  padding-top: 81px;
+  padding-bottom: 81px;
 }
 
 .advantages-additional-list .advantages-additional-item:nth-child(odd) {
@@ -266,24 +271,24 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 96px 304px;
+  padding-bottom: 96px;
+}
+
+.wrapper-additional {
+  padding: 96px 0 54px;
 }
 
 .search-hotel-title {
   margin-bottom: 20px;
 }
 
-.search-hotel-description {
-  margin-bottom: 54px;
-}
-
 .search-hotel-button {
   display: block;
+  padding: 8px 50px;
+  margin: 0 auto;
   font-size: 20px;
   line-height: 1.8;
   text-align: center;
-  padding: 8px 50px;
-  margin: 0 108px;
   border-radius: var(--border-radius);
 }
 
@@ -291,9 +296,13 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-bottom: 104px;
   background-image: none;
   background-color: #ffffff;
-  padding: 96px 258px;
+}
+
+.subscribe-wrapper {
+  padding: 96px 0 54px;
 }
 
 .subscribe-special {
@@ -311,18 +320,14 @@ body {
   color: #ffffff;
 }
 
-.subscribe-description {
-  margin-bottom: 54px;
-}
-
 .subscribe-special .subscribe-description {
   color: #ffffff;
 }
 
 .subscribe-form {
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 452px 232px;
-  margin-bottom: 8px;
 }
 
 .input-email {
@@ -331,8 +336,8 @@ body {
   line-height: 1.33;
   color: #000000;
   background-color: var(--color-light-gray);
-  grid-column: 1/2;
   border: 0;
+  grid-column: 1/2;
 }
 
 .subscribe-button {
@@ -341,9 +346,10 @@ body {
   background-color: #82b3d3;
   border: 0;
   grid-column: 2/3;
+  padding: 8px 50px;
 }
 
-.page-footer-wrapper {
+.page-footer {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -374,18 +380,15 @@ body {
   background-repeat: no-repeat;
 }
 
-.contacts {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .contacts-phone {
+  display: block;
   font-size: 40px;
   line-height: 1;
   text-align: center;
   color: #000000;
   text-transform: uppercase;
   text-decoration: none;
+  white-space: nowrap;
 }
 
 /*Catalog*/
@@ -401,17 +404,17 @@ body {
 
 .main-heading {
   margin: 0;
+  margin-bottom: 8px;
   font-size: 60px;
   line-height: 1.3;
-  margin-bottom: 8px;
 }
 
 .breadcrumbs {
   margin: 0;
   padding: 0;
+  margin-bottom: 40px;
   display: flex;
   list-style-type: none;
-  margin-bottom: 40px;
 }
 
 .breadcrumbs-item {
@@ -435,9 +438,9 @@ body {
 
 .filter-group {
   margin: 0;
+  margin-right: 70px;
   padding: 0;
   border: none;
-  margin-right: 70px;
 }
 
 .filter-group:last-child {
@@ -472,9 +475,9 @@ body {
 .filter-button {
   background-color: #82b3d3;
   border: 0;
+  border-radius: var(--border-radius);
   padding: 8px 50px;
   margin-bottom: 32px;
-  border-radius: var(--border-radius);
 }
 
 .filter-button:last-child {
@@ -494,8 +497,8 @@ body {
 .catalog-hotel-sorting {
   display: flex;
   margin: 0 auto;
-  gap: 70px;
   margin-bottom: 40px;
+  gap: 70px;
 }
 
 .catalog-hotel-title {
@@ -526,40 +529,114 @@ body {
 }
 
 .cards-list {
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
+  gap: 20px;
   margin: 0;
+  margin-bottom: 80px;
   padding: 0;
   list-style-type: none;
-  margin-bottom: 80px;
+}
+
+.cards-item {
+  display: grid;
+  grid-template-columns: repeat(2, 140px);
+  padding: 20px;
+  gap: 16px 20px;
+  box-shadow: 0 0 5px 0 rgb(229, 229, 229);
+}
+
+.cards-link-image {
+  grid-column: 1/-1;
+}
+
+.cards-image {
+  display: block;
 }
 
 .card-link-title {
   text-decoration: none;
+  grid-column: 1/-1;
 }
 
 .cards-title {
+  margin: 0;
   font-size: 24px;
   line-height: 1.17;
   color: #000000;
 }
 
 .cards-text {
+  margin: 0;
   font-size: 18px;
   line-height: 1.17;
 }
 
+.cards-name,
+.cards-button,
+.stars {
+  grid-column: 1/2;
+}
+
+.cards-price,
+.favourites-button,
+.favourites-button-selected,
+.cards-rating {
+  grid-column: 2/3;
+}
+
+.cards-price {
+  justify-self: end;
+}
+
 .cards-button {
+  padding: 8px 26px;
   border: 0;
+  border-radius: var(--border-radius);
 }
 
 .favourites-button {
+  padding: 8px 20px;
   background-color: #82b3d3;
 }
 
 .favourites-button-selected {
+  padding: 8px 18px;
   background-color: #7db54f;
 }
 
+.stars {
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  align-self: center;
+  background-image: url("../images/icons/star.svg");
+  background-repeat: repeat-x;
+}
+
+.one-stars {
+  width: 18px;
+}
+
+.two-stars {
+  width: 36px;
+}
+
+.three-stars {
+  width: 54px;
+}
+
+.four-stars {
+  width: 72px;
+}
+
+.five-stars {
+  width: 90px;
+}
+
 .cards-rating {
+  margin: 0;
+  padding: 8px 22px;
   font-size: 16px;
   line-height: 1.25;
   text-transform: uppercase;
@@ -569,17 +646,10 @@ body {
 .pagination {
   padding: 0;
   margin: 0;
-  list-style-type: none;
   display: flex;
-  margin-bottom: 3px;
-}
-
-.pagination-item {
-  margin-right: 8px;
-}
-
-.pagination-item:last-child {
-  margin-right: 0;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style-type: none;
 }
 
 .pagination-link {
@@ -592,8 +662,8 @@ body {
   text-transform: uppercase;
   color: #ffffff;
   background-color: #82b3d3;
-  width: 60px;
-  height: 60px;
+  border-radius: var(--border-radius);
+  min-width: 60px;
   padding: 12px 18px;
 }
 
@@ -605,7 +675,6 @@ body {
 .pagination-light {
   background-color: #ffffff;
   color: #000000;
-  width: 60px;
-  height: 60px;
+  min-width: 60px;
   padding: 12px 18px;
 }
