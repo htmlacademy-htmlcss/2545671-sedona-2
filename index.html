@@ -104,14 +104,18 @@
         <ul class="advantages-list advantages-additional-list">
           <li class="advantages-item advantages-additional-item">
             <div class="advantages-item-wrapper advantages-additional-item-wrapper">
-              <h3 class="advantages-title advantages-additional-title">Жильё</h3>
+              <h3
+                class="advantages-title advantages-additional-title advantages-additional-housing advantages-additional-icon">
+                Жильё</h3>
               <p class="advantages-description">Рекомендуем пожить в&nbsp;настоящем мотеле,<br>всё как в&nbsp;кино!
               </p>
             </div>
           </li>
           <li class="advantages-item advantages-additional-item advantages-additional-light">
             <div class="advantages-item-wrapper advantages-additional-item-wrapper">
-              <h3 class="advantages-title advantages-additional-title">Еда</h3>
+              <h3
+                class="advantages-title advantages-additional-title advantages-additional-food advantages-additional-icon">
+                Еда</h3>
               <p class="advantages-description">Всегда заказывайте<br>топовый фирменный бургер,
                 вы&nbsp;не&nbsp;разочаруетесь!
               </p>
@@ -119,7 +123,9 @@
           </li>
           <li class="advantages-item advantages-additional-item">
             <div class="advantages-item-wrapper advantages-additional-item-wrapper">
-              <h3 class="advantages-title advantages-additional-title">Сувениры</h3>
+              <h3
+                class="advantages-title advantages-additional-title advantages-additional-surprise advantages-additional-icon">
+                Сувениры</h3>
               <p class="advantages-description">Не&nbsp;только китайского, но&nbsp;и&nbsp;настоящего местного
                 производства!
               </p>
@@ -185,6 +191,25 @@
         </svg>
       </a>
     </footer>
+    <div class="modal-container modal-container-close">
+      <div class="modal modal-booking">
+        <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+        <button class="modal-close-button"></button>
+        <form class="booking-form" action="https://echo.htmlacademy.ru/" method="post">
+          <p class="field-group">
+            <label class="booking-form-label" for="booking-check-in-date">Дата заезда:</label>
+            <input class="booking-form-date field" type="text" id="booking-check-in-date" name="booking-check-in-date"
+              placeholder="27 апреля 2020">
+          </p>
+          <p class="field-group">
+            <label class="booking-form-label" for="booking-departure-date">Дата выезда:</label>
+            <input class="booking-form-field field" type="text" id="booking-departure-date"
+              name="booking-departure-date" placeholder="1 сентября 2023">
+          </p>
+          <button class="booking-form-button" type="submit">Найти</button>
+        </form>
+      </div>
+    </div>
   </body>
 
 </html>

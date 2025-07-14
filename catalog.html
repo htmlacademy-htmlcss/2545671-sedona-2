@@ -102,12 +102,12 @@
               <legend class="filter-title">Стоимость, ₽:</legend>
               <div class="range">
                 <div class="range-wrapper-inputs">
-                  <label class="control price" for="min-price">от</label>
-                  <input class="price-input" name="price-input-min" id="min-price" type="number" value="0"
-                    placeholder="0">
-                  <label class="control price" for="max-price">до</label>
-                  <input class="price-input" name="price-input-max" id="max-price" type="number" value="9000"
-                    placeholder="9000">
+                  <label class="price price-min" for="min-price">от</label>
+                  <input class="price-input price-input-min" name="min-price-input" id="min-price" type="number"
+                    value="0" placeholder="0">
+                  <label class="price price-max" for="max-price">до</label>
+                  <input class="price-input price-input-max" name="max-price-input" id="max-price" type="number"
+                    value="9000" placeholder="9000">
                 </div>
                 <div class="range-scale">
                   <div class="range-bar" style="left: 0; width: 226px;">
@@ -138,17 +138,17 @@
           </select>
           <ul class="view">
             <li class="view-item">
-              <a class="view-link view-link-active" href="catalog.html?view=tile">
+              <a class="view-link view-link-active view-link-cards" href="catalog.html?view=tile">
                 <span class="visually-hidden">Карточки</span>
               </a>
             </li>
             <li class="view-item">
-              <a class="view-link" href="catalog.html?view=card">
+              <a class="view-link view-link-slides" href="catalog.html?view=card">
                 <span class="visually-hidden">Слайды</span>
               </a>
             </li>
             <li class="view-item">
-              <a class="view-link" href="catalog.html?view=list">
+              <a class="view-link view-link-list" href="catalog.html?view=list">
                 <span class="visually-hidden">Список</span>
               </a>
             </li>
