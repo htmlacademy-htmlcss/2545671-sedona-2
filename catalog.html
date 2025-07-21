@@ -58,7 +58,7 @@
         <section class="filter" data-test="filter">
           <h2 class="visually-hidden">Фильтр списка гостиниц</h2>
           <form class="filter-form" action="https://echo.htmlacademy.ru/" method="get">
-            <fieldset class="filter-group">
+            <fieldset class="filter-group filter-group-type">
               <legend class="filter-title">Инфраструктура:</legend>
               <ul class="filter-list">
                 <li class="filter-item">
@@ -98,17 +98,19 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="filter-group">
+            <fieldset class="filter-group filter-group-accent">
               <legend class="filter-title">Стоимость, ₽:</legend>
               <div class="range">
-                <div class="range-wrapper-inputs">
-                  <label class="price price-min" for="min-price">от</label>
+                <p class="range-wrapper-inputs">
+                  <label class="price" for="min-price">от</label>
                   <input class="price-input price-input-min" name="min-price-input" id="min-price" type="number"
                     value="0" placeholder="0">
-                  <label class="price price-max" for="max-price">до</label>
+                </p>
+                <p class="range-wrapper-inputs">
+                  <label class="price" for="max-price">до</label>
                   <input class="price-input price-input-max" name="max-price-input" id="max-price" type="number"
                     value="9000" placeholder="9000">
-                </div>
+                </p>
                 <div class="range-scale">
                   <div class="range-bar" style="left: 0; width: 226px;">
                     <button class="range-toggle toggle-min" type="button">
@@ -285,6 +287,7 @@
         </a>
       </section>
       <a class="developer-link" href="https://htmlacademy.ru/intensive/htmlcss">
+        <span class="visually-hidden">Логотип разработчика html academy</span>
         <svg class="developer-logo" aria-hidden="true" focusable="false" width="115" height="34" viewBox="0 0 115 34"
           xmlns="http://www.w3.org/2000/svg">
           <path
