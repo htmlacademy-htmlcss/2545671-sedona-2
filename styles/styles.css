@@ -106,11 +106,11 @@ body {
   object-fit: scale-down;
 
   &:hover {
-    opacity: 0.3;
+    opacity: 0.6;
   }
 
   &:active {
-    opacity: 0.6;
+    opacity: 0.3;
   }
 }
 
@@ -473,7 +473,9 @@ body {
   line-height: 1.33;
   background-color: var(--color-light-gray);
   border: 0;
-  border-radius: 4px 0 0 4px;
+  border-top-left-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
+
 
   &:not(:disabled):hover {
     background-color: #e5e5e5;
@@ -494,7 +496,8 @@ body {
   line-height: 1.8;
   background-color: #82b3d3;
   border: 0;
-  border-radius: 0 4px 4px 0;
+  border-top-right-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
   padding: 8px 50px;
 
   &:not(:disabled):hover {
@@ -581,7 +584,7 @@ body {
   color: #000000;
   text-transform: uppercase;
   text-decoration: none;
-
+  white-space: nowrap;
 
   &:hover,
   &:focus {
@@ -675,14 +678,18 @@ body {
   background-size: 15px 15px;
   cursor: pointer;
 
-  &:hover,
-  &:focus {
+  &:not(:disabled):hover,
+  &:not(:disabled):focus {
     background-color: #e5e5e5;
   }
 
-  &:active {
+  &:not(:disabled):active {
     background-color: #e5e5e5;
     opacity: 0.3;
+  }
+
+  &:disabled {
+    background-color: #e5e5e5;
   }
 }
 
@@ -723,8 +730,12 @@ body {
   border: 0;
   border-radius: var(--border-radius);
 
-  &:hover,
-  &:focus {
+  &:not(:disabled):hover,
+  &:not(:disabled):focus {
+    background-color: #e5e5e5;
+  }
+
+  &:disabled {
     background-color: #e5e5e5;
   }
 }
@@ -784,14 +795,12 @@ body {
   font-weight: 700;
   color: #000000;
   text-align: center;
-  -webkit-appearance: textfield;
-          appearance: textfield;
+  appearance: textfield;
 }
 
 .booking-quantity-input::-webkit-outer-spin-button,
 .booking-quantity-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-          appearance: none;
+  appearance: none;
   margin: 0;
 }
 
@@ -800,10 +809,24 @@ body {
   border: 0;
   cursor: pointer;
   background-color: var(--color-light-gray);
+
+  &:not(:disabled):hover::before,
+  &:not(:disabled):focus::before {
+    background-color: #000000;
+  }
+
+  &:not(:disabled):active::before {
+    opacity: 0.2;
+  }
+
+  &:disabled {
+    background-color: #e5e5e5;
+  }
 }
 
 .minus-button {
-  border-radius: 4px 0 0 4px;
+  border-top-left-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
 
   &::before {
     content: "";
@@ -821,19 +844,11 @@ body {
             mask-size: 16px 15px;
     background-color: rgb(117, 97, 87, 0.3);
   }
-
-  &:hover::before,
-  &:focus::before {
-    background-color: #000000;
-  }
-
-  &:active::before {
-    opacity: 0.2;
-  }
 }
 
 .plus-button {
-  border-radius: 0 4px 4px 0;
+  border-top-right-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
 
   &::before {
     content: "";
@@ -851,15 +866,6 @@ body {
             mask-size: 14px 14px;
     background-color: rgb(117, 97, 87, 0.3);
   }
-
-  &:hover::before,
-  &:focus::before {
-    background-color: #000000;
-  }
-
-  &:active::before {
-    opacity: 0.2;
-  }
 }
 
 .booking-form-button {
@@ -873,13 +879,17 @@ body {
   line-height: 1.2;
   margin-top: 29px;
 
-  &:hover,
-  &:focus {
+  &:not(:disabled):hover,
+  &:not(:disabled):focus {
     background-color: #68a2ca;
   }
 
-  &:active {
+  &:not(:disabled):active {
     color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:disabled {
+    background-color: #e5e5e5;
   }
 }
 
@@ -1080,22 +1090,17 @@ body {
   font-size: 18px;
   line-height: 1.28;
 
-  &:not(:disabled):hover {
+  &:not:hover {
     opacity: 0.6;
   }
 
-  &:not(:disabled):active {
-    opacity: 0.3;
-  }
-
-  &:disabled {
+  &:not:active {
     opacity: 0.3;
   }
 }
 
 .control-input {
-  -webkit-appearance: none;
-          appearance: none;
+  appearance: none;
   margin: 0;
   width: 20px;
   height: 20px;
@@ -1184,11 +1189,13 @@ body {
 }
 
 .price-input-min {
-  border-radius: 4px 0 0 4px;
+  border-top-left-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
 }
 
 .price-input-max {
-  border-radius: 0 4px 4px 0;
+  border-top-right-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
 }
 
 .price-input[value] {
@@ -1196,14 +1203,12 @@ body {
   color: #000000;
   font-weight: 700;
   font-size: 18px;
-  -webkit-appearance: textfield;
-          appearance: textfield;
+  appearance: textfield;
 }
 
 .price-input::-webkit-outer-spin-button,
 .price-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-          appearance: none;
+  appearance: none;
   margin: 0;
 }
 
@@ -1264,6 +1269,10 @@ body {
     background-color: #68a2ca;
   }
 
+  &:disabled {
+    background-color: transparent;
+    opacity: 10%;
+  }
 }
 
 .filter-button-reset {
@@ -1274,11 +1283,6 @@ body {
   &:not(:disabled):hover {
     background-color: transparent;
     opacity: 60%;
-  }
-
-  &:disabled {
-    background-color: transparent;
-    opacity: 10%;
   }
 }
 
@@ -1314,8 +1318,7 @@ body {
   background-image: url("../images/icons/select-arrow.svg");
   background-position: right 16px center;
   background-repeat: no-repeat;
-  -webkit-appearance: none;
-          appearance: none;
+  appearance: none;
 
   &:not(:disabled):hover {
     border: 2px solid #68a2ca;
