@@ -136,7 +136,7 @@ body {
   text-decoration: none;
 
   &:hover {
-    color: var(--color-basic);
+    opacity: 0.6;
   }
 
   &:active {
@@ -222,6 +222,9 @@ body {
 }
 
 .hero {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   background-image: url("../images/divider.svg"), url("../images/hero-background.jpg");
   background-repeat: no-repeat;
   background-size: 100% auto, cover;
@@ -239,11 +242,13 @@ body {
 .advantages {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .special-wrapper {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   width: 655px;
   margin: 0 auto;
 }
@@ -782,9 +787,10 @@ body {
 }
 
 .booking-quantity-input {
-  padding: 14px 10px;
+  padding: 14px 8px;
   width: 31px;
   height: 48px;
+  border: 2px solid transparent;
   border-radius: 0;
 }
 
@@ -806,7 +812,7 @@ body {
 
 .booking-button {
   padding: 14px 10px;
-  border: 0;
+  border: 2px solid transparent;
   cursor: pointer;
   background-color: var(--color-light-gray);
 
@@ -831,8 +837,8 @@ body {
   &::before {
     content: "";
     display: block;
-    width: 16px;
-    height: 15px;
+    width: 14px;
+    height: 2px;
     margin-left: 2px;
     -webkit-mask-image: url("../images/icons/minus.svg");
             mask-image: url("../images/icons/minus.svg");
@@ -840,8 +846,8 @@ body {
             mask-repeat: no-repeat;
     -webkit-mask-position: center;
             mask-position: center;
-    -webkit-mask-size: 16px 15px;
-            mask-size: 16px 15px;
+    -webkit-mask-size: 14px 2px;
+            mask-size: 14px 2px;
     background-color: rgb(117, 97, 87, 0.3);
   }
 }
@@ -871,7 +877,8 @@ body {
 .booking-form-button {
   grid-column: 1/-1;
   min-width: 577px;
-  padding: 18px 256px;
+  min-height: 60px;
+  padding: 12px;
   background-color: #83b3d3;
   border: 0;
   border-radius: 10px;
@@ -1090,11 +1097,15 @@ body {
   font-size: 18px;
   line-height: 1.28;
 
-  &:not:hover {
+  &:hover {
     opacity: 0.6;
   }
 
-  &:not:active {
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:has(.control-input:disabled) {
     opacity: 0.3;
   }
 }
@@ -1108,14 +1119,6 @@ body {
   background-color: #ffffff;
   vertical-align: middle;
   border-radius: var(--border-radius);
-
-  &:not(:disabled):hover {
-    opacity: 0.6;
-  }
-
-  &:not(:disabled):active {
-    opacity: 0.3;
-  }
 
   &:disabled {
     opacity: 0.3;
