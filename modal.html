@@ -96,7 +96,7 @@
           </li>
         </ul>
       </section>
-      <section class="advantages-additional" data-test="advantages-additional">
+      <section class="advantages-additional">
         <div class="special-wrapper advantages-additional-wrapper">
           <h2 class="page-title advantages-additional-page-title">Приезжайте в&nbsp;Седону отдохнуть в&nbsp;комфорте
             и&nbsp;уюте!</h2>
@@ -156,8 +156,7 @@
           <label class="visually-hidden" for="subscribe-email">
             Ваш e-mail
           </label>
-          <input class="input-email" type="email" id="subscribe-email" name="user-email" placeholder="Ваш e-mail"
-            required>
+          <input class="input-email" type="email" id="subscribe-email" name="user-email" placeholder="Ваш e-mail">
           <button class="button subscribe-button" type="submit">Подписаться</button>
         </form>
       </section>
@@ -194,7 +193,7 @@
         </svg>
       </a>
     </footer>
-    <div class="modal-container modal-container-close">
+    <div class="modal-container" data-test="modal">
       <div class="modal modal-booking">
         <h2 class="modal-title">Поиск гостиницы в&nbsp;Седоне</h2>
         <button class="modal-close-button" type="button"><span class="visually-hidden">Закрыть модальное
@@ -203,13 +202,13 @@
           <div class="booking-form-group booking">
             <label class="booking-label" for="booking-check-in-date">Дата заезда:</label>
             <input class="booking-input booking-date booking-icon" type="text" id="booking-check-in-date"
-              name="booking-check-in-date" placeholder="Укажите дату" value="27 апреля 2020">
+              name="booking-check-in-date" placeholder="Укажите дату" value="27 апреля 2020" required>
             <p class="booking-text text-error">Мы&nbsp;не&nbsp;можем отправить вас в&nbsp;прошлое.</p>
           </div>
           <div class="booking-form-group booking">
             <label class="booking-label" for="booking-departure-date">Дата выезда:</label>
             <input class="booking-input booking-date booking-icon" type="text" id="booking-departure-date"
-              name="booking-departure-date" placeholder="Укажите дату" value="1 сентября 2023">
+              name="booking-departure-date" placeholder="Укажите дату" value="1 сентября 2023" required>
             <p class="booking-text">На&nbsp;эти даты есть свободные номера. Пока есть.</p>
           </div>
           <div class="booking-form-group booking-form-group-quantity">
